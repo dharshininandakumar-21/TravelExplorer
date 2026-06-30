@@ -20,6 +20,27 @@ A complete, professionally designed Travel & Tourism web application built with 
 The toggle is in the header on **every page** (including the admin dashboard) and remembers the user's choice across sessions and page loads — no flash-of-wrong-theme on reload.
 
 ---
+# Screenshots
+
+## Home Page
+
+![Home](screenshots/home.png)
+
+## Login Page
+
+![Login](screenshots/login.png)
+
+## Booking Page
+
+![Booking](screenshots/booking.png)
+
+## Payment Page
+
+![Payment](screenshots/payment.png)
+
+## Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ## 🚀 Features
 
