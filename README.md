@@ -59,32 +59,6 @@ The toggle is in the header on **every page** (including the admin dashboard) an
 
 ---
 
-## ⚙️ Setup Instructions
-
-### 1. Database Setup
-```sql
-source src/main/webapp/database_setup.sql
-```
-Safely creates `tour_db`, all tables, seeds sample packages and the default admin — safe to re-run on an existing database.
-
-### 2. Configure DB Credentials
-Edit `src/main/webapp/META-INF/context.xml`:
-```xml
-username="root"
-password="YOUR_MYSQL_PASSWORD"
-```
-
-### 3. Build & Deploy
-```bash
-mvn clean package
-# Copy target/tourism.war to Tomcat's webapps/ folder, then start Tomcat
-```
-
-### 4. Access the App
-- **Site:** `http://localhost:8080/tourism/`
-- **Admin Login:** `admin@travelexplorer.com` / `admin123`
-
----
 
 ## 📂 Project Structure
 
@@ -126,23 +100,6 @@ tourism/
 └── pom.xml
 ```
 
----
-
-## 🌗 How the Theme Toggle Works
-
-1. An inline script in every page's `<head>` reads `localStorage.getItem('te-theme')` and applies `data-theme="light"` to `<html>` **before first paint** — this prevents any flash of the wrong theme.
-2. `js/theme.js` wires up the click handler on `#themeToggle`, switches the attribute, and persists the choice.
-3. All colors are defined as CSS custom properties in `:root` (dark, default) and overridden in `[data-theme="light"]` — every component automatically re-themes with zero extra JS.
-
----
-
-## 👤 Default Credentials
-
-| Role  | Email                        | Password  |
-|-------|-------------------------------|-----------|
-| Admin | admin@travelexplorer.com      | admin123  |
-
----
 
 ## 📋 Database Tables
 
