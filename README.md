@@ -24,23 +24,23 @@ The toggle is in the header on **every page** (including the admin dashboard) an
 
 ## Home Page
 
-![Home](screenshots/home.png)
+![Home](Screenshots/home.png)
 
 ## Login Page
 
-![Login](screenshots/login.png)
+![Login](Screenshots/login.png)
 
 ## Booking Page
 
-![Booking](screenshots/booking.png)
+![Booking](Screenshots/destination.png)
 
 ## Payment Page
 
-![Payment](screenshots/payment.png)
+![Payment](Screenshots/destination2.png)
 
 ## Admin Dashboard
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](Screenshots/admin.png)
 
 ## 🚀 Features
 
