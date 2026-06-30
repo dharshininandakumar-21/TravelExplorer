@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelExplorer — Discover Your Next Adventure</title>
+<script>
+/* Apply saved theme before paint to avoid flash */
+(function(){try{var t=localStorage.getItem('te-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
+</script>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <a href="index.html" class="logo"><i class="fas fa-globe-americas"></i> TravelExplorer</a>
+
+    <nav id="mainNav">
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a>
+      <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="theme-toggle" id="themeToggle" title="Toggle dark / light theme">
+        <div class="theme-toggle-track">
+          <div class="theme-toggle-thumb"><i class="theme-icon fas fa-moon"></i></div>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="container">
+    <div class="hero-content anim">
+      <div class="hero-eyebrow anim anim-d1"><i class="fas fa-star"></i> Rated #1 Travel Platform 2025</div>
+      <h1 class="anim anim-d2">Explore The World <span class="highlight">With Us</span></h1>
+      <p class="hero-subtitle anim anim-d3">Discover amazing places, create unforgettable memories, and embark on journeys that will last a lifetime.</p>
+
+      <form action="destinations" method="get" class="hero-search anim anim-d4">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" name="search" placeholder="Search destinations, packages, experiences...">
+          <button type="submit" class="btn-search">Explore Now <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </form>
+
+      <div class="hero-stats anim anim-d4">
+        <div class="stat"><h3>500+</h3><p>Destinations</p></div>
+        <div class="stat"><h3>10K+</h3><p>Happy Travelers</p></div>
+        <div class="stat"><h3>50+</h3><p>Tour Packages</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Handpicked For You</span>
+      <h2>Featured Destinations</h2>
+      <p>Curated experiences for your perfect getaway, chosen by our travel experts</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/goa.jpg" alt="Goa">
+          <div class="card-badge">Popular</div>
+        </div>
+        <div class="card-content">
+          <h3>Goa</h3>
+          <p>Beaches, fun and relaxation await you in India's party capital.</p>
+          <div class="card-footer">
+            <span class="price">From ₹8,999</span>
+            <a href="destinations" class="btn-card">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/paris.jpg" alt="Paris">
+          <div class="card-badge">Romantic</div>
+        </div>
+        <div class="card-content">
+          <h3>Paris</h3>
+          <p>Experience the city of love and lights with unforgettable moments.</p>
+          <div class="card-footer">
+            <span class="price">From ₹49,999</span>
+            <a href="destinations" class="btn-card">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/swiss.jpg" alt="Switzerland">
+          <div class="card-badge">Adventure</div>
+        </div>
+        <div class="card-content">
+          <h3>Switzerland</h3>
+          <p>Enjoy scenic beauty and alpine adventures in the heart of Europe.</p>
+          <div class="card-footer">
+            <span class="price">From ₹79,999</span>
+            <a href="destinations" class="btn-card">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <div class="more-destinations">
+            <i class="fas fa-plus-circle"></i>
+            <h3>More Destinations</h3>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Discover More</h3>
+          <p>Explore our complete collection of amazing destinations worldwide.</p>
+          <div class="card-footer">
+            <a href="destinations" class="btn-card">View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">The TravelExplorer Difference</span>
+      <h2>Why Choose Us?</h2>
+      <p>We make your travel dreams come true, one journey at a time</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Safe &amp; Secure</h3>
+        <p>Your safety is our top priority with verified partners and secure bookings.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+        <h3>Best Price Guarantee</h3>
+        <p>Get the best deals with our price match guarantee and exclusive offers.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3>24/7 Support</h3>
+        <p>Round-the-clock customer support to assist you throughout your journey.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Expert Guides</h3>
+        <p>Experience destinations like a local with our expert tour guides.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-plane"></i></div>
+        <h3>Easy Booking</h3>
+        <p>Simple and hassle-free booking process for all your travel needs.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-award"></i></div>
+        <h3>Quality Assured</h3>
+        <p>We ensure high-quality experiences with carefully curated packages.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-globe-americas"></i> TravelExplorer</h3>
+        <p>Making travel accessible and memorable for everyone. Explore the world with confidence.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations">Destinations</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Mumbai, India</p>
+          <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> info@travelexplorer.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Travel &amp; Tourism Management System. All rights reserved.</p>
+      <p>Crafted with <i class="fas fa-heart" style="color:var(--accent);"></i> for travelers everywhere</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/theme.js"></script>
+</body>
+</html>

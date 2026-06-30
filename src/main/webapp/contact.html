@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — TravelExplorer</title>
+<script>
+(function(){try{var t=localStorage.getItem('te-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
+</script>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <a href="index.html" class="logo"><i class="fas fa-globe-americas"></i> TravelExplorer</a>
+    <nav id="mainNav">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a>
+      <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+      <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="theme-toggle" id="themeToggle" title="Toggle dark / light theme">
+        <div class="theme-toggle-track">
+          <div class="theme-toggle-thumb"><i class="theme-icon fas fa-moon"></i></div>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="contact-hero">
+  <div class="container">
+    <div class="anim">
+      <span class="section-tag">We'd Love to Hear From You</span>
+      <h1>Get In Touch</h1>
+      <p>Our team is here to help you plan your perfect journey</p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <h3>Visit Us</h3>
+      <p>123 Travel Street<br>Mumbai, Maharashtra 400001<br>India</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><i class="fas fa-phone"></i></div>
+      <h3>Call Us</h3>
+      <p>+91 63839 27706<br>+91 80727 84006</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+      <h3>Email Us</h3>
+      <p>info@travelexplorer.com<br>support@travelexplorer.com</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><i class="fas fa-clock"></i></div>
+      <h3>Business Hours</h3>
+      <p>Mon – Fri: 9:00 AM – 7:00 PM<br>Saturday: 10:00 AM – 5:00 PM<br>Sunday: Closed</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-form-card anim">
+      <h3><i class="fas fa-paper-plane" style="color:var(--accent);margin-right:8px;"></i>Send Us a Message</h3>
+
+      <div id="sentAlert" class="alert-box alert-green hidden">
+        <i class="fas fa-check-circle"></i> Your message has been sent! We'll get back to you within 24 hours.
+      </div>
+
+      <form action="contact" method="post" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+        </div>
+        <div class="form-group">
+          <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+          <textarea id="message" name="message" placeholder="Tell us more about your travel plans..." required></textarea>
+        </div>
+        <button type="submit" class="btn-contact"><i class="fas fa-paper-plane"></i> <span>Send Message</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="office-locations">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Find Us</span>
+      <h2>Our Offices</h2>
+      <p>Visit us at any of our convenient locations across India</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card">
+        <h3>Mumbai Headquarters</h3>
+        <p>123 Travel Street, Mumbai<br>Maharashtra 400001</p>
+        <div class="location-contact">
+          <p><i class="fas fa-phone"></i> +91 63839 50807</p>
+          <p><i class="fas fa-envelope"></i> mumbai@travelexplorer.com</p>
+        </div>
+      </div>
+      <div class="location-card">
+        <h3>Delhi Office</h3>
+        <p>456 ABC Street, Delhi<br>Delhi 110001</p>
+        <div class="location-contact">
+          <p><i class="fas fa-phone"></i> +91 96652 43212</p>
+          <p><i class="fas fa-envelope"></i> delhi@travelexplorer.com</p>
+        </div>
+      </div>
+      <div class="location-card">
+        <h3>Bangalore Office</h3>
+        <p>789 XYZ Road, Bangalore<br>Karnataka 560001</p>
+        <div class="location-contact">
+          <p><i class="fas fa-phone"></i> +91 98765 43213</p>
+          <p><i class="fas fa-envelope"></i> bangalore@travelexplorer.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-globe-americas"></i> TravelExplorer</h3>
+        <p>Making travel accessible and memorable for everyone. Explore the world with confidence.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations">Destinations</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Mumbai, India</p>
+          <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> info@travelexplorer.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Travel &amp; Tourism Management System. All rights reserved.</p>
+      <p>Crafted with <i class="fas fa-heart" style="color:var(--accent);"></i> for travelers everywhere</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/theme.js"></script>
+<script>
+(function(){
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('sent') === 'true') {
+    document.getElementById('sentAlert').classList.remove('hidden');
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — TravelExplorer</title>
+<script>
+(function(){try{var t=localStorage.getItem('te-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
+</script>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <a href="index.html" class="logo"><i class="fas fa-globe-americas"></i> TravelExplorer</a>
+    <nav id="mainNav">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a>
+      <a href="login.html" class="active"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="theme-toggle" id="themeToggle" title="Toggle dark / light theme">
+        <div class="theme-toggle-track">
+          <div class="theme-toggle-thumb"><i class="theme-icon fas fa-moon"></i></div>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="auth-container">
+  <div class="auth-card anim">
+    <div class="auth-header">
+      <div class="auth-logo"><i class="fas fa-compass"></i></div>
+      <h2>Welcome Back</h2>
+      <p>Sign in to continue your journey with us</p>
+    </div>
+
+    <form action="login" method="post" class="auth-form" id="loginForm">
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <span class="password-toggle" onclick="togglePw('password', this)"><i class="fas fa-eye"></i></span>
+      </div>
+
+      <div class="form-options">
+        <label class="checkbox">
+          <input type="checkbox" name="remember">
+          Remember me
+        </label>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn-auth"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="register.html" class="auth-link">Create one here</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/theme.js"></script>
+<script>
+function togglePw(id, el) {
+  const input = document.getElementById(id);
+  const icon = el.querySelector('i');
+  if (input.type === 'password') { input.type = 'text'; icon.className = 'fas fa-eye-slash'; }
+  else { input.type = 'password'; icon.className = 'fas fa-eye'; }
+}
+/* Show error message if login failed */
+(function(){
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('error') === '1') {
+    const div = document.createElement('div');
+    div.className = 'alert-box alert-red';
+    div.innerHTML = '<i class="fas fa-exclamation-circle"></i> Invalid email or password. Please try again.';
+    const form = document.getElementById('loginForm');
+    if (form) form.insertBefore(div, form.firstChild);
+  }
+})();
+</script>
+</body>
+</html>
